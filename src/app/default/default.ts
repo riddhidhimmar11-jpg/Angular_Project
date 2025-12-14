@@ -10,11 +10,11 @@ import { RouterLink,Router } from '@angular/router';
 })
 export class Default {
 
-  constructor (private router : Router){}
-  //protected readonly //router = inject(Router);
+  // constructor (private router : Router){}
+  protected readonly router = inject(Router);
   gotohome()
   {
-    this.router.navigate(['home'])
+    this.router.navigate(['home']);
   }
   
 }

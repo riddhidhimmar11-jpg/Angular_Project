@@ -1,21 +1,22 @@
-h2{
+h1{
+    font-size: 50px;
+    color: brown;
     text-align: center;
-    color: red;
-    font-size: 40px;
 }
-.btn-home {
+.mybtn {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 10px 20px;
   background: #4c84ff;
-  color: white;
-  border-radius: 8px;
+  color: #fff;
+  border-radius: 6px;
   text-decoration: none;
   font-size: 16px;
+  margin: 17px;
   font-weight: 600;
-  cursor: pointer;
   transition: 0.3s;
+  margin-left: 214px;
 }
 
-.btn-home:hover {
+.mybtn:hover {
   background: #1a5bff;
 }
