@@ -1,0 +1,34 @@
+.contact-form .form-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-form .form-label span {
+  color: red;
+}
+
+.contact-form .form-control {
+  border-radius: 0;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-color: #000;
+}
+
+.send-btn {
+  background: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 0;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.send-btn:hover {
+  background: #222;
+  color: #fff;
+}

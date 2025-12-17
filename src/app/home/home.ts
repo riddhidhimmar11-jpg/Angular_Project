@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.css',
 })
 export class Home {
+  //       slide = 1;
+
+  // changeSlide() {
+  //   this.slide = this.slide === 1 ? 2 : 1;
+  // }
 
 }
