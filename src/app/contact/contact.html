@@ -1,0 +1,86 @@
+
+<section class="py-5">
+  <div class="container">
+
+    <form class="contact-form" (ngSubmit)="add()">
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label>Your Name</label>
+          <input type="text"
+                 class="form-control"
+                 name="name"
+                 [(ngModel)]="name"
+                 required>
+        </div>
+
+        <div class="col-md-6">
+          <label>Your Email</label>
+          <input type="email"
+                 class="form-control"
+                 name="email"
+                 [(ngModel)]="email"
+                 required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>Subject</label>
+        <input type="text"
+               class="form-control"
+               name="subject"
+               [(ngModel)]="subject"
+               required>
+      </div>
+
+      <div class="mb-3">
+        <label>Message</label>
+        <textarea class="form-control"
+                  rows="4"
+                  name="message"
+                  [(ngModel)]="message"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success">
+        {{ editIndex === null ? 'ADD' : 'UPDATE' }}
+      </button>
+
+    </form>
+
+    <!-- TABLE -->
+    @if (emp.length > 0) {
+      <table class="table table-bordered table-striped mt-4 text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (user of emp; track $index) {
+            <tr>
+              <td>{{$index + 1}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.subject}}</td>
+              <td>{{user.message}}</td>
+              <td>
+                <button class="btn btn-warning btn-sm me-2"
+                        (click)="edit($index)">Edit</button>
+
+                <button class="btn btn-danger btn-sm"
+                        (click)="delete($index)">Delete</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+
+  </div>
+</section>
