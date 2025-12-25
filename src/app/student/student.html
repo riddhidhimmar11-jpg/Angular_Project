@@ -1,1 +1,32 @@
-<p>student works!</p>
+
+
+
+
+<button class="btn btn-primary" (click)="studService.addStudent()">Add Teacher</button>
+@if (studService.showForm) {
+  <app-modal 
+          [model]="studService.model"
+          (save)="savestudent($event)"
+          [editIndex]="studService.editIndex">
+  </app-modal>
+
+}
+<app-tabel 
+          [details]="students"
+          (edit)="editdata($event)"
+          (delete)="studService.deleteStudent($event)">
+          </app-tabel>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/teacher">Teacher</a></li>
+        <li><a routerLink="/student">Student</a></li>
+      </ul>
+    </div>
+
+  </div>
+  

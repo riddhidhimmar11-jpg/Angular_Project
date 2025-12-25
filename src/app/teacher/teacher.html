@@ -1,1 +1,34 @@
-<p>teacher works!</p>
+<button class="btn btn-primary" (click)="teacherService.addTeacher()">Add Teacher</button>
+@if (teacherService.showForm) {
+    <app-modal
+          [model]="teacherService.model"
+          (save)="saveteacher($event)"
+          [editIndex]="teacherService.editIndex"></app-modal>      
+}
+
+<div class="dashboard">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <li><a routerLink="/teacher">Teacher</a></li>
+      <li><a routerLink="/student">Student</a></li>
+    </ul>
+  </div>
+
+  <!-- Add Button -->
+  <div class="content">
+    
+    
+    
+    <!-- Teacher Table -->
+    <app-tabel 
+            [details]="teacher"
+            (edit)="editdata($event)"
+            (delete)="teacherService.deleteTeacher($event)"></app-tabel>
+  </div>
+</div>
+
+
+           
+  

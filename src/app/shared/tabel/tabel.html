@@ -1,1 +1,30 @@
-<p>tabel works!</p>
+<table border="1" width="100%" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Gender</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (detail of details; track $index) {
+      <tr [routerLink]="detail.email">
+        <td>{{ detail.name }}</td>
+        <td>{{ detail.phone }}</td>
+        <td>{{ detail.email }}</td>
+        <td>{{ detail.add }}</td>
+        <td>{{ detail.gender }}</td>
+
+        <td>
+          <button (click)="edit.emit($index)">Edit</button>
+          <button (click)="delete.emit($index)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+

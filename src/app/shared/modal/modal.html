@@ -1,1 +1,13 @@
-<p>modal works!</p>
+Name: <input [(ngModel)]="model.name" name="name"><br>
+Phone: <input [(ngModel)]="model.phone" name="phone"><br>
+Email: <input [(ngModel)]="model.email" name="email"><br>
+Address: <input [(ngModel)]="model.add" name="add"><br>
+
+Gender:
+<input type="radio" value="male" name="gender" [(ngModel)]="model.gender"> Male
+<input type="radio" value="female" name="gender" [(ngModel)]="model.gender"> Female
+<br><br>
+
+<button type="button" (click)="submit()">
+  {{editIndex === null ? 'Save' : 'Update' }}
+</button>
